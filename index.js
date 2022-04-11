@@ -9,8 +9,8 @@ const stockIP = "192.168";
 
 // **** START OF DOCUMENT PARAMS ****
 const fileName = "output.txt"; // NAME OF THE FILE TO OUTPUT
-const dir = "/home/cryosilver/Projects/Dev/Lab/ip-ping-scanner"; // CHANGE TO YOUR OWN LOCATION
-const location = `${dir}/${fileName}`;
+const directory = "/home/cryosilver/Projects/Dev/Lab/ip-ping-scanner"; // CHANGE TO YOUR OWN LOCATION
+const location = `${directory}/${fileName}`;
 
 // Write file to document
 const writeFile = (content) => {
