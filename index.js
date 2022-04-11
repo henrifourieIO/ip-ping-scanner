@@ -2,14 +2,17 @@ const PING = require("net-ping");
 const fs = require("fs");
 const SESSION = PING.createSession();
 
+let rawdata = fs.readFileSync('./settings.json');
+let settings = JSON.parse(rawdata);
+
 // **** START OF IP PARAMS ****
 const limit = 255; // WARNING DO NOT CHANGE!!!
-const stockIP = "192.168";
+const stockIP = settings.stockIP;
 // **** END OF IP PARAMS ****
 
 // **** START OF DOCUMENT PARAMS ****
-const fileName = "output.txt"; // NAME OF THE FILE TO OUTPUT
-const directory = "/home/cryosilver/Projects/Dev/Lab/ip-ping-scanner"; // CHANGE TO YOUR OWN LOCATION
+const fileName = settings.fileName;
+const directory = settings.directory; 
 const location = `${directory}/${fileName}`;
 
 // Write file to document
@@ -19,6 +22,7 @@ const writeFile = (content) => {
     //file written successfully
   } catch (err) {
     console.error(err);
+    return;
   }
 };
 // **** END OF DOCUMENT PARAMS ****
