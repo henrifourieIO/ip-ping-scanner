@@ -1,0 +1,14 @@
+{
+  "name": "ip-ping-scanner",
+  "version": "1.0.0",
+  "description": "IP Scanner",
+  "main": "index.js",
+  "scripts": {
+    "start": "sudo node index"
+  },
+  "author": "Henri Fourie",
+  "license": "MIT",
+  "dependencies": {
+    "net-ping": "^1.2.3"
+  }
+}
