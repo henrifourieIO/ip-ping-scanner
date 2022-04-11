@@ -4,7 +4,7 @@
   "description": "IP Scanner",
   "main": "index.js",
   "scripts": {
-    "test": "sudo node index"
+    "start": "sudo node index"
   },
   "author": "Henri Fourie",
   "license": "MIT",
